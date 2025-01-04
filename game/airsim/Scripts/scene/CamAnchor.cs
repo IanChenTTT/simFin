@@ -3,7 +3,6 @@ using Godot;
 public partial class CamAnchor : Node3D
 {
    private Node3D _execute;
-   private float _time;
 
    [Export]
    public float FollowSpeed = 4.0f;
@@ -21,8 +20,7 @@ public partial class CamAnchor : Node3D
     public override void _PhysicsProcess(double delta)
     {
         base._PhysicsProcess(delta);
-        _time = (float)delta;
-        this.Position = this.Position.Lerp(_execute.Position, _time * FollowSpeed);
+        this.Position = this.Position.Lerp(_execute.Position,  (float)delta* FollowSpeed);
     }
 
 }

@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfgbf0f6wejvk"]
+[gd_scene load_steps=9 format=3 uid="uid://dfgbf0f6wejvk"]
 
 [ext_resource type="PackedScene" uid="uid://mjrp6qpm5oly" path="res://Scenes/execute.tscn" id="1_8q03c"]
-[ext_resource type="Script" path="res://Scripts/Execute.cs" id="2_ojsg8"]
-[ext_resource type="Script" path="res://Scripts/CamAnchor.cs" id="2_qe137"]
+[ext_resource type="Script" path="res://Scripts/scene/Execute.cs" id="2_nfwv4"]
+[ext_resource type="Script" path="res://Scripts/scene/CamAnchor.cs" id="3_b2003"]
+[ext_resource type="PackedScene" uid="uid://bs746i4q8cskt" path="res://Scenes/server_node.tscn" id="4_0udxc"]
+[ext_resource type="PackedScene" uid="uid://chyounh3imm1" path="res://Scenes/UI.tscn" id="5_aromu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2vc8"]
 albedo_color = Color(0, 0, 0, 1)
@@ -18,7 +20,9 @@ size = Vector3(60, 2, 60)
 
 [node name="Execute" parent="." instance=ExtResource("1_8q03c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-script = ExtResource("2_ojsg8")
+script = ExtResource("2_nfwv4")
+max_speed = 10.0
+acceleration = 10.0
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -36,9 +40,13 @@ light_color = Color(1, 1, 0.952941, 1)
 
 [node name="CamAnchor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-script = ExtResource("2_qe137")
+script = ExtResource("3_b2003")
 
 [node name="Camera3D" type="Camera3D" parent="CamAnchor"]
 transform = Transform3D(-1, 6.25678e-08, -6.10574e-08, 0, 0.698415, 0.715693, 8.74228e-08, 0.715693, -0.698415, 0, 10, -10)
 size = 31.932
 far = 100.0
+
+[node name="ServerNode" parent="." instance=ExtResource("4_0udxc")]
+
+[node name="UI" parent="." instance=ExtResource("5_aromu")]

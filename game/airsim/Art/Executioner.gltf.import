@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Executioner.gltf-02fa84f21f9a314574888f93c814
 
 [params]
 
-nodes/root_type="StaticBody3D"
+nodes/root_type="CharacterBody3D"
 nodes/root_name="Execute"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
