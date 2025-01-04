@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfgbf0f6wejvk"]
+
+[ext_resource type="PackedScene" uid="uid://mjrp6qpm5oly" path="res://Scenes/execute.tscn" id="1_8q03c"]
+[ext_resource type="Script" path="res://Scripts/Execute.cs" id="2_ojsg8"]
+[ext_resource type="Script" path="res://Scripts/CamAnchor.cs" id="2_qe137"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2vc8"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ruddv"]
+material = SubResource("StandardMaterial3D_c2vc8")
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e2tj0"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node"]
+
+[node name="Execute" parent="." instance=ExtResource("1_8q03c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_ojsg8")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_ruddv")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_e2tj0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.00523593, 0.999986, 0, -0.999986, -0.00523593, 0, 11.5725, 0)
+light_color = Color(1, 1, 0.952941, 1)
+
+[node name="CamAnchor" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_qe137")
+
+[node name="Camera3D" type="Camera3D" parent="CamAnchor"]
+transform = Transform3D(-1, 6.25678e-08, -6.10574e-08, 0, 0.698415, 0.715693, 8.74228e-08, 0.715693, -0.698415, 0, 10, -10)
+size = 31.932
+far = 100.0
