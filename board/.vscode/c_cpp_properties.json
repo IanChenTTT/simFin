@@ -8,8 +8,10 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/Users/ianchen/Desktop/school/HCI/pioFinall/include",
-                "/Users/ianchen/Desktop/school/HCI/pioFinall/src",
+                "/Users/ianchen/Desktop/school/HCI/simFin/board/include",
+                "/Users/ianchen/Desktop/school/HCI/simFin/board/src",
+                "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src",
+                "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
@@ -218,7 +220,6 @@
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/Ethernet/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
-                "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src",
@@ -236,7 +237,6 @@
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/USB/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
-                "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
                 "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 ""
@@ -244,8 +244,10 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/Users/ianchen/Desktop/school/HCI/pioFinall/include",
-                    "/Users/ianchen/Desktop/school/HCI/pioFinall/src",
+                    "/Users/ianchen/Desktop/school/HCI/simFin/board/include",
+                    "/Users/ianchen/Desktop/school/HCI/simFin/board/src",
+                    "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src",
+                    "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
@@ -454,7 +456,6 @@
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/Ethernet/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/FFat/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
-                    "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdate/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/HTTPUpdateServer/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src",
@@ -472,7 +473,6 @@
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/USB/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
-                    "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
                     "/Users/ianchen/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     ""
